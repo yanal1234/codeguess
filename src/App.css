@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #0B2434;
+    padding: 20px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* هذا هو root تبع React */
+div#root {
+    height: 100%;
+    width: 100%;
+    max-height: 400px;
+    max-width: 400px;
+}
+
+/* الصندوق الأبيض */
+main {
+    background-color: #F5F5F5;
+    height: 100%;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* شبكة النرد */
+.dice-container {
+ display: grid;
+ grid-template:repeat(2, 1fr)/ repeat(5,1fr);
+ gap:20px
+}
+.dice-containeron{
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: #F5F5F5;
+    border: none;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.137);
+    padding: 20px;
+    cursor:pointer;
+}
+
+.dice-containerof {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: #15ebeb;
+    border: none;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.137);
+    padding: 20px;
+    cursor: pointer;
+}
+
+.RoallDie{
+    padding: 20px 40px;
+    background-color: rgb(47, 47, 255);
+    color: #F5F5F5;
+    border: none;
+    border-radius: 8px;
+}
+
+.titel{
+    text-align: center;
+    font-size: 1.1rem;
+}
