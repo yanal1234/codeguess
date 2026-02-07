@@ -1,16 +1,66 @@
-# React + Vite
+# CodeGuess (Assembly: Endgame)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A programming word-guessing game built with React.
+Guess the hidden word before you run out of attempts and save the programming world from Assembly.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Word guessing gameplay (Wordle-style)
+* Programming themed words
+* On-screen keyboard with colors
+* Win / Lose modal with animations
+* Sounds for win and game over
+* Score system (wins, losses, streak)
+* Responsive design
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* React + Vite
+* JavaScript
+* CSS
+* GitHub Pages (deployment)
 
-## Expanding the ESLint configuration
+## Run Locally
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Clone the project:
+git clone [https://github.com/yanal1234/codeguess.git](https://github.com/yanal1234/codeguess.git)
+
+Go to folder:
+cd codeguess
+
+Install dependencies:
+npm install
+
+Run project:
+npm run dev
+
+Open in browser:
+[http://localhost:5173](http://localhost:5173)
+
+## Build Project
+
+npm run build
+
+## Deploy to GitHub Pages
+
+Make sure vite.config.js contains:
+base: "/codeguess/"
+
+Then run:
+npm run deploy
+
+After deployment open:
+[https://yanal1234.github.io/codeguess/](https://yanal1234.github.io/codeguess/)
+
+## Project Structure
+
+src/
+assets/        sounds & images
+languages.js   languages data
+listofword.js  words list
+utils.js       helper functions
+App.jsx
+
+## Author
+
+GitHub: [https://github.com/yanal1234](https://github.com/yanal1234)
