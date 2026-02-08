@@ -11,6 +11,31 @@ import loseSound from "./assets/game_over.mp3"
 import correctSound from "./assets/correct_sound.mp3"
 import errorSound from "./assets/error_sound.mp3"
 import gamemenuselect from "./assets/game_menu_select.mp3"
+import confetti from "canvas-confetti";
+
+function megaWinConfetti() {
+  confetti({
+    particleCount: 180,
+    spread: 80,
+    startVelocity: 55,
+    origin: { x: 0.5, y: 0.6 },
+  });
+
+  confetti({
+    particleCount: 120,
+    spread: 120,
+    startVelocity: 45,
+    origin: { x: 0.1, y: 0.7 },
+  });
+
+  confetti({
+    particleCount: 120,
+    spread: 120,
+    startVelocity: 45,
+    origin: { x: 0.9, y: 0.7 },
+  });
+}
+
 
 export default function Assembly(obj) {
 
@@ -258,6 +283,13 @@ useEffect(() => {
 }, []);
 
 
+useEffect(() => {
+  if (gamewim) {
+    megaWinConfetti();
+  }
+}, [gamewim]);
+
+
 
 const dangerLevel = wrongGuessesArray.length / (languages.length-1);
 
@@ -292,7 +324,7 @@ style={{
 
 
 
-    {gamewim && <Confetti width={screenSize.w} height={screenSize.h} />}
+   
 
   <header>
     <h1>Assembly: Endgame</h1>
